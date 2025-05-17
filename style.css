@@ -1,0 +1,71 @@
+body {
+  font-family: "Cascadia Code", sans-serif;
+  background-color: #111111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+p {
+  font-weight: 100;
+  opacity: 70%;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.header nav {
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #111111;
+  box-shadow: 0 1px 0 rgba(200, 200, 200, 0.1);
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.my-name,
+.about {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.occupation,
+.team {
+  grid-column-start: 6;
+  grid-column-end: 8;
+}
+
+.address,
+.desc {
+  grid-column-start: 8;
+  grid-column-end: 12;
+}
+
+.my-name,
+.occupation,
+.address {
+  font-weight: 600;
+  color: #00ff00;
+}
+
+/* mobile first  */
+@media (max-width: 1050px) {
+  .address {
+    display: none;
+  }
+
+  .occupation {
+    grid-column-start: 6;
+    grid-column-end: 12;
+  }
+}
+
+@media (max-width: 750px) {
+}
