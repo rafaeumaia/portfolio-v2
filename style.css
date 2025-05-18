@@ -16,7 +16,7 @@ p {
   margin-top: 20px;
 }
 
-.header nav {
+.header > nav {
   display: grid;
   grid-template-rows: 60px;
   grid-template-columns: repeat(12, 1fr);
@@ -36,14 +36,12 @@ p {
   grid-column-end: 5;
 }
 
-.occupation,
-.team {
+.occupation {
   grid-column-start: 6;
   grid-column-end: 8;
 }
 
-.address,
-.desc {
+.address {
   grid-column-start: 8;
   grid-column-end: 12;
 }
@@ -55,7 +53,71 @@ p {
   color: #00ff00;
 }
 
+.experience {
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-start: 6;
+  grid-column-end: 12;
+}
+
+.team {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.desc {
+  grid-column-start: 5;
+  grid-column-end: 12;
+}
+
 /* mobile first  */
+@media (max-width: 1550px) {
+  .header {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .hero {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .my-name,
+  .about {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .occupation {
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+
+  .address {
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
+
+  .experience {
+    display: grid;
+    grid-template-rows: 60px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
+
+  .team {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .desc {
+    grid-column-start: 4;
+    grid-column-end: -1;
+  }
+}
+
 @media (max-width: 1050px) {
   .address {
     display: none;
@@ -67,5 +129,37 @@ p {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
+  .hero {
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .experience {
+    display: grid;
+    grid-template-rows: 60px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
+
+  .team {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .desc {
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
+
+  .about {
+    grid-row-start: 1;
+    grid-column-end: 13;
+  }
+
+  .experience {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
 }
