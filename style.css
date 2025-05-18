@@ -26,7 +26,7 @@ p {
 
 .hero {
   display: grid;
-  grid-template-rows: 60px;
+  grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr);
 }
 
