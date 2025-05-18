@@ -28,6 +28,8 @@ p {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 60px;
+  margin-top: 40px;
 }
 
 .my-name,
@@ -73,12 +75,8 @@ p {
 
 /* mobile first  */
 @media (max-width: 1550px) {
+  .hero,
   .header {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .hero {
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -132,7 +130,6 @@ p {
 @media (max-width: 800px) {
   .hero {
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
   }
 
   .experience {
